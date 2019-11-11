@@ -36,30 +36,36 @@ var initArrayB = (A) => {
     return B
 }
 
-var solution = (A, iTimes) => {
+var solution = async(A, iTimes) => {
     // A: is the picture
     // iTimes: number of time to rotate.
+    // solution(A, iTimes);
+    console.log("Picture before: ");
+    logTable(A);
+    console.log("Picture after: ");
+    A = await rotate(A, iTimes);
+    logTable(A);
+
+}
+
+var rotate = (A, iTimes)=>{
     var iTimes = iTimes % 4;
     if (iTimes === 0) {
         return A;
     } else {
         var B = initArrayB(A);
-        console.log("itime: " + iTimes);
-        console.log("It is rotating: ");
+        // console.log("itime: " + iTimes);
+        // console.log("It is rotating: ");
         var size = A.length;
-        // for (var count=1; count<=iTimes; count++){
-        // console.log("Rotating: "+count);
         for (let i = 0; i < size; i++) {
             for (let j = 0; j < size; j++) {
                 B[j][size - i - 1] = A[i][j];
             }
         }
-        solution(B, iTimes - 1);
+        return rotate(B, iTimes - 1);
+        // In this step, we can use this way or just by looping max 3 times. :) Ez game.
     }
+    
 }
 
-// solution(A, iTimes);
-console.log("Picture before: ");
-// logTable(A);
-console.log("Picture after: ")
-logTable(solution(A, iTimes));
+solution(A, iTimes);
