@@ -24,5 +24,4 @@ var expect = require('chai').expect;
             var result = rotator.logTable(aMockArray);
             assert.ok(rotator, "rotator.logTable ran well");
         });
-
     });
