@@ -1,5 +1,4 @@
-var fs = require('fs'),
-    filename = process.argv[2];
+var fs = require('fs');
 
 // var A = [
 //     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
@@ -79,14 +78,14 @@ var fs = require('fs'),
 // solution();
 
 //Note: It couldn't be used ARROW Function inside of Object properties because of the difference from the 'this' context
-var rotator = {
+const rotator = {
     rotate: function (A, iTimes) {
-        var iTimes = iTimes % 4;
+        iTimes = iTimes % 4;
         if (iTimes === 0) {
             return A;
         } else {
-            var B = this.initArrayB(A);
-            var size = A.length;
+            let B = this.initArrayB(A),
+                size = A.length;
             for (let i = 0; i < size; i++) {
                 for (let j = 0; j < size; j++) {
                     B[j][size - i - 1] = A[i][j];
@@ -98,12 +97,12 @@ var rotator = {
 
     },
     readPictureFromFile: function () {
-        var textInput = fs.readFileSync('input.txt', 'utf-8'),
+        let textInput = fs.readFileSync('input.txt', 'utf-8'),
             iTimes = textInput.split('\r\n[\r\n ')[0],
             sArray = (textInput.split('\r\n[\r\n ')[1]).split('\r\n]\r\n')[0],
             A = [],
             matches = sArray.match(/\[.*?\]/g);
-        for (var i = 0; i < matches.length; i++) {
+        for (let i = 0; i < matches.length; i++) {
             A.push(matches[i].replace(/[\[\]]/g, '').split(',').map(x => parseInt(x)));
         }
         return {
@@ -115,7 +114,7 @@ var rotator = {
         // A: is the picture
         // iTimes: number of time to rotate.
 
-        var iTimes = this.readPictureFromFile().iTimes,
+        let iTimes = this.readPictureFromFile().iTimes,
             aPicture = this.readPictureFromFile().picture;
 
         console.log("Picture before rotating: ");
@@ -126,15 +125,15 @@ var rotator = {
 
     },
     logTable: function (A) {
-        for (var i = 0; i < A.length; i++) {
+        for (let i = 0; i < A.length; i++) {
             console.log(A[i] + " ");
         }
     },
     initArrayB: function (A) {
-        var size = A.length,
+        let size = A.length,
             B = [];
-        for (var i = 0; i < size; i++) {
-            var aRow = new Array(size).fill(null);
+        for (let i = 0; i < size; i++) {
+            let aRow = new Array(size).fill(null);
             B.push(aRow);
         }
         return B
