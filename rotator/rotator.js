@@ -94,7 +94,6 @@ const rotator = {
             return this.rotate(B, iTimes - 1);
             // In this step, we can use this way or just by looping max 3 times. :) Ez game.
         }
-
     },
     readPictureFromFile: function () {
         let textInput = fs.readFileSync('input.txt', 'utf-8'),
@@ -113,7 +112,6 @@ const rotator = {
     start: async function () {
         // A: is the picture
         // iTimes: number of time to rotate.
-
         let iTimes = this.readPictureFromFile().iTimes,
             aPicture = this.readPictureFromFile().picture;
 
@@ -122,7 +120,6 @@ const rotator = {
         console.log(`Picture after rotating ${iTimes} times: `);
         aPicture = await this.rotate(aPicture, iTimes);
         this.logTable(aPicture);
-
     },
     logTable: function (A) {
         for (let i = 0; i < A.length; i++) {
