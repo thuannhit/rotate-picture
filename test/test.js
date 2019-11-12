@@ -24,4 +24,16 @@ var expect = require('chai').expect;
             var result = rotator.logTable(aMockArray);
             assert.ok(rotator, "rotator.logTable ran well");
         });
+        it("Testing the start function", function () {
+            var result = rotator.start();
+            assert.ok(result, "rotator.start ran well");
+        });
+        it("Testing the rotate function", function () {
+            var aMockArray = [
+                [1, 1],
+                [2, 2]
+            ];
+            var result = rotator.rotate(aMockArray, 1);
+            assert.equal(result[0][0], 2);
+        });
     });
