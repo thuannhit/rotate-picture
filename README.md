@@ -25,4 +25,4 @@ npm test
 ```
 The coverage number is being shown in the console window after we run tests.
 
-**Note**: The input.txt is the input test file, the first value is the number of times to rotate, and the Array below is the picture. Feel free to change to table or the number of time to rotate to test.
+**Note**: The input.txt is the input test file, the first value is the number of times to rotate, and the Array below is the picture. Feel free to change to Array or the number of time to rotate for testing.
