@@ -15,14 +15,14 @@ let rotate = (A, iTimes) => {
         return rotate(B, iTimes - 1);
     }
 };
-let startRotating = async (picture, iTimes) => {
+let startRotating = (picture, iTimes) => {
     // A: is the picture
     // iTimes: number of time to rotate.
     if (!Array.isArray(picture) || !Array.isArray(picture[0]) || !Number.isInteger(iTimes)) {
         return undefined;
     }
     let aPicture = picture;
-    aPicture = await rotate(aPicture, iTimes);
+    aPicture = rotate(aPicture, iTimes);
     return aPicture
 };
 let initArrayB = (A) => {
