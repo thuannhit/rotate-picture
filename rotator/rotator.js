@@ -18,8 +18,8 @@ let rotate = (A, iTimes) => {
 let startRotating = async (picture, iTimes) => {
     // A: is the picture
     // iTimes: number of time to rotate.
-    if (!Array.isArray(picture) || !Number.isInteger(iTimes)) {
-        return "";
+    if (!Array.isArray(picture) || !Array.isArray(picture[0]) || !Number.isInteger(iTimes)) {
+        return undefined;
     }
 
     let aPicture = picture;
