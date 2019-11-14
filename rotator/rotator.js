@@ -21,19 +21,9 @@ let startRotating = async (picture, iTimes) => {
     if (!Array.isArray(picture) || !Array.isArray(picture[0]) || !Number.isInteger(iTimes)) {
         return undefined;
     }
-
     let aPicture = picture;
-    console.log("Picture before rotating: ");
-    logTable(aPicture);
-    console.log(`Picture after rotating ${iTimes} times: `);
     aPicture = await rotate(aPicture, iTimes);
-    logTable(aPicture);
     return aPicture
-};
-let logTable = (A) => {
-    for (let i = 0; i < A.length; i++) {
-        console.log(A[i] + " ");
-    }
 };
 let initArrayB = (A) => {
     let size = A.length,
