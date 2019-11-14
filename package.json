@@ -22,7 +22,6 @@
     "@babel/runtime": "^7.7.2",
     "esm": "^3.2.25",
     "express": "^4.17.1",
-    "fs": "0.0.1-security",
     "nyc": "^14.1.1"
   },
   "devDependencies": {

@@ -29,7 +29,6 @@ let startRotating = async (picture, iTimes) => {
     aPicture = await rotate(aPicture, iTimes);
     logTable(aPicture);
     return aPicture
-
 };
 let logTable = (A) => {
     for (let i = 0; i < A.length; i++) {

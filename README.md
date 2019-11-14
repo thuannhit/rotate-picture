@@ -33,5 +33,3 @@ And then, we just need to transfer the input values to the function:
 ```
 startRotating(picture <which is an array>, <number of times to rotate>)
 ```
-
-**Note**: The input.txt is the input test file, the first value is the number of times to rotate, and the Array below is the picture. Feel free to change to Array or the number of time to rotate for testing.
