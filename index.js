@@ -15,4 +15,5 @@ var A = [
     [1, 5, 3, 4, 8, 3, 8, 3, 8, 2]
 ],
 b=3;
+//  This is just for testing on how to use the module exported
 startRotating(A, b);
