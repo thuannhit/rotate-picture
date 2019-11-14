@@ -14,9 +14,9 @@ let picture = [
     [1, 5, 3, 4, 8, 3, 8, 3, 8, 2],
     [1, 5, 3, 4, 8, 3, 8, 3, 8, 2]
 ],
-iTimes=3;
+    iTimes = 3;
 //  This is just for testing on how to use the module exported
-let rotateAPicture=async(picture, iTimes)=>{
+let rotateAPicture = async (picture, iTimes) => {
     console.log("Picture before rotating:");
     console.log(picture);
     console.log(`Picture after rotating ${iTimes}: `)
